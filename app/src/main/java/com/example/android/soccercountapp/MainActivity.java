@@ -99,8 +99,10 @@ public class MainActivity extends AppCompatActivity {
         y.setText(String.valueOf(num));
     }
 
-    /****************************************************************/
-
+    /***************************OTHER METHODS**********************************/
+    
+    //Define a winner using score stats
+    
     public void winner(View view){
         String win = "The winner is ";
         if(team1Goals>team2Goals){
@@ -113,12 +115,16 @@ public class MainActivity extends AppCompatActivity {
         }
         displayWinner(win);
     }
-
+    
+    //Shows the winner on the announcement table
+    
     public void displayWinner(String name){
         TextView str = (TextView)findViewById(R.id.announcement);
         str.setText(name);
     }
-
+    
+    //Reset all statistics and announcement table
+    
     public void reset(View view){
         team1Goals = 0;
         team2Goals = 0;
